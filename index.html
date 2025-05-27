@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frisch Zrt.</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <h1>
+                <img src="img/frisch.png" alt="Site Logo" width="50" height="50" class="logo">
+            </h1>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li class="nav-item"><a href="kampany.html" class="nav-link">Kampányunk</a></li>
+                <li class="nav-item"><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
+                <li class="nav-item ctn"><a href="elerhetoseg.html" class="nav-link">Elérhetőség</a></li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" width="40" height="40" class="menu-btn">
+        </nav>
+
+        <div class="blur-overlay"></div>
+
+        <header>
+            <div class="header-content">
+                <h2>Innováció. Felelősség.</h2>
+                <div class="line"></div>
+                <h1>FRISCH</h1>
+                <A href="rolunk.html" class="ctn">Tudj meg többet</A>
+            </div>
+
+        </header>
+
+        <section class="kompolife">
+            <div class="title">
+                <h1>KOMPOLIFE</h1>
+                <div class="line"></div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="./img/img1.jpg" alt="" width="300" height="300">
+                    <h4>A termékről</h4>
+                    <p>A termék elkészítéséhez szükséges anyagok elsősorban növényi hulladékok, amelyek a piac egyéb ágában nem lennének felhasználhatóak</p>
+                    <a href="kompolife.html" class="ctn">Tudj meg többet...</a>
+                </div>
+                <div class="col">
+                    <img src="./img/img2.jpg" alt="" width="300" height="300">
+                    <h4>A környezetre gyakorolt hatás</h4>
+                    <p>Jelentősen környezetkímélőbb és biztonságosabb, és mindemellett továbbra is versenyképes.</p>
+                    <a href="ujulas.html" class="ctn">Tudj meg többet...</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="elkotelezettseg">
+            <div class="elkotelezettseg-content">
+                <h1>TÖBB MINT TERMÉKFEJLESZTÉS</h1>
+                <div class="line"></div>
+                <p>A Frisch Zrt. elkötelezett a társadalmi felelősségvállalás mellett. CSR stratégiánk három pilléren nyugszik: környezetvédelem, társadalmi felelősségvállalás és munkavállalóink megbecsülése.</p>
+                <a href="kampany.html" class="ctn">Tudj meg többet...</a>
+            </div>
+        </section>
+
+        <section class="join">
+            <div class="row">
+              <div class="col content-col">
+                <h1>SEGÍTS A CÉLUNK ELÉRÉSÉBEN</h1>
+                <div class="line"></div>
+                <p>Cégek és magánszemélyek egyaránt hozzájárulhatnak célunk eléréséhez...</p>
+              </div>
+              <div class="col image-col">
+                <div class="image-gallery">
+                  <img src="./img/helping.png" alt="Helping" class="toggle-btn" data-panel="helping">
+                  <img src="./img/share.png" alt="Share" class="toggle-btn" data-panel="share">
+                  <img src="./img/mailing.png" alt="Mailing" class="toggle-btn" data-panel="mailing">
+                  <img src="./img/connect.png" alt="Connect" class="toggle-btn" data-panel="connect">
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section id="toggle-panels">
+            <div id="helping" class="toggle-panel">
+              <h3>Jótékonysági regisztráció</h3>
+              <form>
+                <input type="text" placeholder="Név">
+                <input type="email" placeholder="Email">
+                <button type="submit" class="ctn">Jelentkezem</button>
+              </form>
+            </div>
+          
+            <div id="share" class="toggle-panel">
+              <h3>Ossza meg</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          
+            <div id="mailing" class="toggle-panel">
+              <h3>Hírlevél feliratkozás</h3>
+              <form>
+                <input type="email" placeholder="Email">
+                <button type="submit" class="ctn">Feliratkozás</button>
+              </form>
+            </div>
+          
+            <div id="connect" class="toggle-panel">
+              <h3>Céges együttműködés</h3>
+              <form>
+                <input type="text" placeholder="Cégnév">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Üzenet"></textarea>
+                <button type="submit" class="ctn">Kapcsolatfelvétel</button>
+              </form>
+            </div>
+          </section>
+          
+            <section class="footer">
+                <p>Város 1234 Város-Kerület, Város,1234 5678 | Phone: +36 01 234 5678 | Email: kompolife@frisch.hu</p>
+                <p>Copyright © 2025 Frisch zrt.</p>
+            </section>
+
+<script>
+    const links = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
+
+<script>
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const panels = document.querySelectorAll('.toggle-panel');
+  
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-panel');
+        const panelToShow = document.getElementById(targetId);
+  
+        panels.forEach(panel => {
+          if (panel !== panelToShow) {
+            panel.classList.remove('active');
+          }
+        });
+  
+        panelToShow.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <script>
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const blurOverlay = document.querySelector('.blur-overlay');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  blurOverlay.classList.toggle('active');
+});
+  </script>
+
+  <script>
+    blurOverlay.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  blurOverlay.classList.remove('active');
+});
+  </script>
+
+    </body>
+</html>

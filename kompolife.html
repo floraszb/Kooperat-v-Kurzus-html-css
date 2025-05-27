@@ -1,0 +1,118 @@
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Kompolife</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="contact-info">
+
+        <nav class="navbar">
+            <h1>
+                <img src="img/frisch.png" alt="Site Logo" width="50" height="50" class="logo">
+            </h1>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li class="nav-item"><a href="kampanyunk.html" class="nav-link">Kampányunk</a></li>
+                <li class="nav-item"><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
+                <li class="nav-item ctn"><a href="elerhetoseg.html" class="nav-link">Elérhetőség</a></li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" width="40" height="40" class="menu-btn">
+        </nav>
+
+        <div class="blur-overlay"></div>
+
+        <header class="blogpost">
+            <h2>Amikor a hulladékból érték lesz.
+                Ismerd meg a zöld műtrágyát, amely jövőt épít, termékenyen és felelősséggel.</h2>
+                <div class="line"></div>
+                <h1>KompoLife</h1>
+          </header>
+          
+          <div class="container-blog">
+            <div class="main-post">
+              <h1>KOMPOLIFE</h1>
+              <p>Frisch zrt. számára - igazodva a 21. századi elvárásokhoz, fogyasztói igényekhez és felelősséget vállalva a környezetért- fontos, hogy egy jelentősen környezetkímélőbb, zöldebb, de hatékonyságában nem csökkenő terméket is kínáljon vevőinek, ezért került megalkotásra a KompoLife, növényi alapú műtrágya. A termék komposzt alapú, azaz a természetes növényi hulladékok bomlása során keletkező anyag pozitív tulajdonságait használja fel, amely kedvező tulajdonságai kiegészülnek az ipari gyártás során belekevert foszfor, kálium,  C-vitamin és nitrogén növény támogató hatásával. Az új műtrágya gyártásának leglényegibb eleme, hogy az egyszerű komposzt alap tápanyagtartalma kerül ellenőrzésre, majd azt a kapott eredmények szerint növelik a különböző anyagok ipari hozzáadásával a kívánt mértékig. A komposzt miatt az így létrejött műtrágya jelentősen környezetkímélőbb és biztonságosabb lesz annak természetes jellege miatt, azonban az ipari dúsítás miatt a nagyobb hatékonyság és versenyképesség is garantált.
+                A termék elkészítéséhez szükséges anyagok elsősorban növényi hulladékok, amelyek a piac egyéb ágában nem lennének felhasználhatóak: zöldséghéjak, fűnyesedék, levelek, fadarabok, szalma vagy forgács, kávézacc és karton. A még környezetkímélőbb termelés miatt az anyagbeszerzés másodkézből történik: a Frisch zrt. felvette a kapcsolatot és megállapodást kötött az ország különböző önkormányzataival a településrendezés során felmerülő növényi hulladék, különböző nagy kávézóhálózatokkal a már nem hasznosított kávézacc, és a vegetáriánus éttermekkel az el nem adható növényi maradék miatt. Ennek megfelelően a KompoLife termék elsősorban már nem hasznosítható forrásokból készül, amelyet csupán másodlagosan egészítenek ki a vásárolt ipari alapanyagok.</p>
+                <p>írta: Szilágyi Nóra</p>
+            </div>
+          
+            <aside class="sidebar">
+              <h2>Egyéb bejegyzéseink</h2>
+          
+              <a href="valtozas.html" class="sidebar-post">
+                <img src="./img/hir5.jpg" alt="Post 1">
+                <div class="sidebar-post-title">Változás</div>
+              </a>
+          
+              <a href="ujulas.html" class="sidebar-post">
+                <img src="./img/hir6.jpg" alt="Post 2">
+                <div class="sidebar-post-title">Megújulás</div>
+              </a>
+          
+              <a href="shortpost.html" class="sidebar-post">
+                <img src="./img/hir7.jpg" alt="Post 3">
+                <div class="sidebar-post-title">Rövid bejegyzés</div>
+              </a>
+            </aside>
+          </div>
+
+        <section class="footer">
+            <p>Város 1234 Város-Kerület, Város,1234 5678 | Phone: +36 01 234 5678 | Email: kompolife@frisch.hu</p>
+            <p>Copyright © 2025 Frisch zrt.</p>
+        </section>
+
+        <script>
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split("/").pop();
+        
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        </script>
+        
+        <script>
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            const panels = document.querySelectorAll('.toggle-panel');
+          
+            toggleButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-panel');
+                const panelToShow = document.getElementById(targetId);
+          
+                panels.forEach(panel => {
+                  if (panel !== panelToShow) {
+                    panel.classList.remove('active');
+                  }
+                });
+          
+                panelToShow.classList.toggle('active');
+              });
+            });
+          </script>
+        
+          <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const blurOverlay = document.querySelector('.blur-overlay');
+        
+        menuBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          blurOverlay.classList.toggle('active');
+        });
+          </script>
+        
+          <script>
+            blurOverlay.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          blurOverlay.classList.remove('active');
+        });
+          </script>
+
+    </body>
+</html>

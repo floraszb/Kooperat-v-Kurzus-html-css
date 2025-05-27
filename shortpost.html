@@ -1,0 +1,117 @@
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Bejegyzés</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="contact-info">
+
+        <nav class="navbar">
+            <h1>
+                <img src="img/frisch.png" alt="Site Logo" width="50" height="50" class="logo">
+            </h1>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li class="nav-item"><a href="kampanyunk.html" class="nav-link">Kampányunk</a></li>
+                <li class="nav-item"><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
+                <li class="nav-item ctn"><a href="elerhetoseg.html" class="nav-link">Elérhetőség</a></li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" width="40" height="40" class="menu-btn">
+        </nav>
+
+        <div class="blur-overlay"></div>
+
+        <header class="blogpost">
+                <h1>Bejegyzés</h1>
+                <div class="line"></div>
+          </header>
+          
+          <div class="container-blog">
+            <div class="main-post">
+              <h1>RÖVID BEJEGYZÉS</h1>
+              <p></p>
+              <p>írta: Tóth Szilárd</p>
+              <p>Források:</p>
+
+            </div>
+          
+            <aside class="sidebar">
+              <h2>Egyéb bejegyzéseink</h2>
+          
+              <a href="kampany.html" class="sidebar-post">
+                <img src="./img/hir8.jpg" alt="Post 1">
+                <div class="sidebar-post-title">Kampány</div>
+              </a>
+          
+              <a href="video.html" class="sidebar-post">
+                <img src="./img/hir1.jpg" alt="Post 2">
+                <div class="sidebar-post-title">Videó</div>
+              </a>
+          
+              <a href="jog.html" class="sidebar-post">
+                <img src="./img/hir2.jpg" alt="Post 3">
+                <div class="sidebar-post-title">Jogi környezet</div>
+              </a>
+            </aside>
+          </div>
+
+        <section class="footer">
+            <p>Város 1234 Város-Kerület, Város,1234 5678 | Phone: +36 01 234 5678 | Email: kompolife@frisch.hu</p>
+            <p>Copyright © 2025 Frisch zrt.</p>
+        </section>
+
+        <script>
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split("/").pop();
+        
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        </script>
+        
+        <script>
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            const panels = document.querySelectorAll('.toggle-panel');
+          
+            toggleButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-panel');
+                const panelToShow = document.getElementById(targetId);
+          
+                panels.forEach(panel => {
+                  if (panel !== panelToShow) {
+                    panel.classList.remove('active');
+                  }
+                });
+          
+                panelToShow.classList.toggle('active');
+              });
+            });
+          </script>
+        
+          <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const blurOverlay = document.querySelector('.blur-overlay');
+        
+        menuBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          blurOverlay.classList.toggle('active');
+        });
+          </script>
+        
+          <script>
+            blurOverlay.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          blurOverlay.classList.remove('active');
+        });
+          </script>
+
+    </body>
+</html>

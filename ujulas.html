@@ -1,0 +1,130 @@
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Megújulás</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="contact-info">
+
+        <nav class="navbar">
+            <h1>
+                <img src="img/frisch.png" alt="Site Logo" width="50" height="50" class="logo">
+            </h1>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Főoldal</a></li>
+                <li class="nav-item"><a href="kampanyunk.html" class="nav-link">Kampányunk</a></li>
+                <li class="nav-item"><a href="rolunk.html" class="nav-link">Rólunk</a></li>
+                <li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
+                <li class="nav-item ctn"><a href="elerhetoseg.html" class="nav-link">Elérhetőség</a></li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" width="40" height="40" class="menu-btn">
+        </nav>
+
+        <div class="blur-overlay"></div>
+
+        <header class="blogpost">
+                <h1>Újratervezve a jövőt a Frisch Zrt.-nél</h1>
+                <div class="line"></div>
+          </header>
+          
+          <div class="container-blog">
+            <div class="main-post">
+              <h1>MEGÚJULÁS</h1>
+              <p>A megújulás számunkra nem csupán változást jelent, hanem tudatos, előremutató döntések sorozatát. A Frisch Zrt. hosszú éveken át volt jelen a hazai agrárszektorban, ám a világ kihívásai, a klímaválság, a termőtalajok kimerülése, az erőforrások túlhasználata, világossá tették: új korszakot kell nyitnunk.</p>
+              <h3>Mi változott?</h3>
+              <p>Korábban a növénytermesztés hatékonysága volt a középpontban. Ma már tudjuk: hatékonyság csak akkor érték, ha fenntartható is. Ezért újragondoltuk teljes működésünket, a termékfejlesztéstől a gyártási folyamatokon át a vállalati filozófiáig.</p>
+              <p>A KompoLife termékünk nem véletlenül született. Ez a műtrágya nemcsak technológiai újítás, hanem egy szemléletváltás szimbóluma is. Növényi alapanyagokból készül, teljes mértékben lebomló, és nemcsak a növényeknek ad életet, hanem a bolygónknak is reményt.</p>
+              <h3>A megújulás három iránya nálunk:</h3>
+              <p>1. Termékmegújítás</p>
+              <p>A Frisch Zrt. első ízben vezette be a 100%-ban növényi alapú, környezetbarát műtrágyát. A KompoLife célja nemcsak a növények tápanyagellátása, hanem a talajélet hosszú távú támogatása is.</p>
+              <p>2. Vállalati kultúra megújulása</p>
+              <p>Munkatársainkkal közösen újrafogalmaztuk, mit jelent ma felelős vállalatként működni. Fenntarthatósági képzéseket indítottunk, és bevontuk kollégáinkat a zöld átállás minden szintjébe.</p>
+              <p>3. CSR-kampányunk megújulása</p>
+              <p>Társadalmi szerepvállalásunk új alapokra került. A környezetvédelem mellett hangsúlyt fektetünk az edukációra, a közösségépítésre, és arra, hogy példát mutassunk egy élhetőbb, zöldebb jövő felé.</p>
+              <h3>Nemcsak új terméket mutatunk be, új irányt is.</h3>
+              <p>A Frisch Zrt.-nél hiszünk abban, hogy a megújulás nem gyengeség, hanem bátorság. Bátorság elismerni, hogy a régi módszerek már nem elegendőek, és bátorság kilépni a megszokásból. Ez a bátorság vezetett minket oda, hogy a fenntarthatóság ne csak cél, hanem alapérték legyen.</p>
+              <h3>Frisch Zrt. – A megújulás útján. Veled. A jövőért.</h3>
+              <p>írta: Szabó Flóra</p>
+              <p>Források:</p>
+              <p>https://chatgpt.com/?model=auto</p>
+            </div>
+          
+            <aside class="sidebar">
+              <h2>Egyéb bejegyzéseink</h2>
+          
+              <a href="shortpost.html" class="sidebar-post">
+                <img src="./img/hir7.jpg" alt="Post 1">
+                <div class="sidebar-post-title">Rövid bejegyzés</div>
+              </a>
+          
+              <a href="kampany.html" class="sidebar-post">
+                <img src="./img/hir8.jpg" alt="Post 2">
+                <div class="sidebar-post-title">Kampányunk</div>
+              </a>
+          
+              <a href="video.html" class="sidebar-post">
+                <img src="./img/hir1.jpg" alt="Post 3">
+                <div class="sidebar-post-title">Videó</div>
+              </a>
+            </aside>
+          </div>
+
+        <section class="footer">
+            <p>Város 1234 Város-Kerület, Város,1234 5678 | Phone: +36 01 234 5678 | Email: kompolife@frisch.hu</p>
+            <p>Copyright © 2025 Frisch zrt.</p>
+        </section>
+
+        <script>
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split("/").pop();
+        
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        </script>
+        
+        <script>
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            const panels = document.querySelectorAll('.toggle-panel');
+          
+            toggleButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-panel');
+                const panelToShow = document.getElementById(targetId);
+          
+                panels.forEach(panel => {
+                  if (panel !== panelToShow) {
+                    panel.classList.remove('active');
+                  }
+                });
+          
+                panelToShow.classList.toggle('active');
+              });
+            });
+          </script>
+        
+          <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const blurOverlay = document.querySelector('.blur-overlay');
+        
+        menuBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          blurOverlay.classList.toggle('active');
+        });
+          </script>
+        
+          <script>
+            blurOverlay.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          blurOverlay.classList.remove('active');
+        });
+          </script>
+
+    </body>
+</html>
