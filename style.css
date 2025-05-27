@@ -824,3 +824,15 @@ header.blogpost {
         height: 400px;
     }
 }
+
+.bejegyzes-kep {
+    width: 800px;
+    height: 600px;
+}
+
+@media (max-width:750px) {
+    .bejegyzes-kep {
+        width: 100%;
+        height: 400px;
+    }
+}
